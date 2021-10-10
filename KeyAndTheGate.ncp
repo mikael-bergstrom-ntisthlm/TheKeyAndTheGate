@@ -1,0 +1,49 @@
+<Project>
+  <Name>KeyAndTheGate</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Klasser</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Avatar</Name>
+        <Access>Public</Access>
+        <Location left="185" top="98" />
+        <Size width="266" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Rectangle rect</Member>
+        <Member type="Field">Key CarriedKey</Member>
+        <Member type="Constructor">public Avatar()</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Method">public void Draw()</Member>
+        <Member type="Method">public void CheckKeyCollision(Key key)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Key</Name>
+        <Access>Public</Access>
+        <Location left="462" top="98" />
+        <Size width="266" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Rectangle rect</Member>
+        <Member type="Field">Door targetDoor</Member>
+        <Member type="Constructor">public Key(Door target)</Member>
+        <Member type="Method">public void Draw()</Member>
+        <Member type="Method">public void UpdatePosition(Vector2 movement)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Door</Name>
+        <Access>Public</Access>
+        <Location left="739" top="98" />
+        <Size width="266" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Rectangle rect</Member>
+        <Member type="Field">public bool IsOpen</Member>
+        <Member type="Method">public bool CheckCollision(Rect otherRectangle)</Member>
+        <Member type="Constructor">public Door(int x, int y)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>
