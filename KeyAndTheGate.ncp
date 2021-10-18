@@ -8,14 +8,16 @@
         <Name>Avatar</Name>
         <Access>Public</Access>
         <Location left="185" top="98" />
-        <Size width="266" height="179" />
+        <Size width="266" height="213" />
         <Collapsed>False</Collapsed>
         <Member type="Field">Rectangle rect</Member>
         <Member type="Field">Key CarriedKey</Member>
+        <Member type="Field">float speed</Member>
         <Member type="Constructor">public Avatar()</Member>
         <Member type="Method">public void Update()</Member>
         <Member type="Method">public void Draw()</Member>
         <Member type="Method">public void CheckKeyCollision(Key key)</Member>
+        <Member type="Method">public void CheckDoorCollision(Door door)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -29,18 +31,20 @@
         <Member type="Constructor">public Key(Door target)</Member>
         <Member type="Method">public void Draw()</Member>
         <Member type="Method">public void UpdatePosition(Vector2 movement)</Member>
+        <Member type="Method">public bool CheckCollision(Rectangle otherRectangle)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Door</Name>
         <Access>Public</Access>
-        <Location left="739" top="98" />
+        <Location left="462" top="288" />
         <Size width="266" height="179" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private Rectangle rect</Member>
         <Member type="Field">public bool IsOpen</Member>
-        <Member type="Method">public bool CheckCollision(Rect otherRectangle)</Member>
         <Member type="Constructor">public Door(int x, int y)</Member>
+        <Member type="Method">public void Draw()</Member>
+        <Member type="Method">public bool CheckCollision(Rect otherRectangle)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
